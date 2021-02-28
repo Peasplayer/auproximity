@@ -15,12 +15,6 @@
       <v-col cols="12" md="6" order-md="1">
         <Tutorial />
       </v-col>
-      <v-col order-md="0">
-        <GithubStar :github-link="githubUrl"/>
-      </v-col>
-      <v-col order-md="2">
-        <DiscordServer :discord-link="discordUrl"/>
-      </v-col>
     </v-row>
   </v-container>
 </template>

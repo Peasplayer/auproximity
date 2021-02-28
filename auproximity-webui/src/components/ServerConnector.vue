@@ -10,7 +10,7 @@
         ></v-text-field>
         <v-text-field
           v-model="gameCode"
-          label="Game Code"
+          label="Code"
           :rules="[rules.required, rules.counter6]"
           counter="6"
           maxlength="6"
@@ -22,14 +22,14 @@
           item-text="backendName"
           item-value="backendType"
           :rules="[rules.required]"
-          label="Server Backend"
+          label="Server Typ"
           required
           outlined
         ></v-select>
         <v-text-field
           v-if="backendType === 2 || backendType === 4"
           v-model="ip"
-          label="Domain name (example.com) or IP Address of the server"
+          label="IP-Adresse"
           :rules="[rules.required]"
           outlined
         ></v-text-field>
@@ -39,7 +39,7 @@
           :items="regions"
           item-text="regionName"
           item-value="regionType"
-          label="Public Lobby Region"
+          label="Region"
           :rules="[rules.publicLobbyRegion]"
           required
           outlined
@@ -58,7 +58,7 @@
           class="mr-4"
           @click="copyShareSlug"
         >
-          Share URL
+          Kopiere URL
         </v-btn>
         <input :value="shareSlug" id="slug-share">
       </v-form>
