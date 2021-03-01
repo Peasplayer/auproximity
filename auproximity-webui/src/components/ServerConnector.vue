@@ -158,8 +158,8 @@ export default class ServerConnector extends Vue {
       (backendModel as PublicLobbyBackendModel).region = this.publicLobbyRegion
     } else if (this.backendType === BackendType.Impostor) {
       (backendModel as ImpostorBackendModel).ip = this.ip
-    } else if (this.backendType == BackendType.Peasplayer) {
-      (backendModel as ImpostorBackendModel).ip = "au.peasplayer.tk"
+    } else if (this.backendType === BackendType.Peasplayer) {
+      (backendModel as ImpostorBackendModel).ip = 'au.peasplayer.tk'
     }
     this.$emit('joinroom', {
       name,
