@@ -27,7 +27,7 @@
           outlined
         ></v-select>
         <v-text-field
-          v-if="backendType === 2 || backendType === 4"
+          v-if="backendType === 3"
           v-model="ip"
           label="IP-Adresse"
           :rules="[rules.required]"
@@ -101,6 +101,10 @@ export default class ServerConnector extends Vue {
       backendType: BackendType.PublicLobby
     },
     {
+      backendName: 'Peasplayer Server',
+      backendType: BackendType.Peasplayer
+    },
+    {
       backendName: 'Privater Impostor Server',
       backendType: BackendType.Impostor
     },
@@ -154,6 +158,8 @@ export default class ServerConnector extends Vue {
       (backendModel as PublicLobbyBackendModel).region = this.publicLobbyRegion
     } else if (this.backendType === BackendType.Impostor) {
       (backendModel as ImpostorBackendModel).ip = this.ip
+    } else if (this.backendType == BackendType.Peasplayer) {
+      (backendModel as ImpostorBackendModel).ip = "au.peasplayer.tk"
     }
     this.$emit('joinroom', {
       name,
