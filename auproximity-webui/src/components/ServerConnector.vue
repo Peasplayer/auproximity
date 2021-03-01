@@ -97,16 +97,12 @@ export default class ServerConnector extends Vue {
   backendType: BackendType = BackendType[this.$route.params.backend || 'PublicLobby'] || BackendType.PublicLobby;
   items = [
     {
-      backendName: 'Official Among Us Servers',
+      backendName: 'Öffentliche Among Us Server',
       backendType: BackendType.PublicLobby
     },
     {
-      backendName: 'Impostor Private Server',
+      backendName: 'Privater Impostor Server',
       backendType: BackendType.Impostor
-    },
-    {
-      backendName: 'NodePolus Private Server',
-      backendType: BackendType.NodePolus
     },
     {
       backendName: 'BepInEx',
@@ -156,7 +152,7 @@ export default class ServerConnector extends Vue {
     }
     if (this.backendType === BackendType.PublicLobby) {
       (backendModel as PublicLobbyBackendModel).region = this.publicLobbyRegion
-    } else if (this.backendType === BackendType.Impostor || this.backendType === BackendType.NodePolus) {
+    } else if (this.backendType === BackendType.Impostor) {
       (backendModel as ImpostorBackendModel).ip = this.ip
     }
     this.$emit('joinroom', {

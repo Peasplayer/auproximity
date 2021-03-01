@@ -1,9 +1,9 @@
 <template>
   <v-card class="pa-5">
-    <h3>Host options</h3>
+    <h3>Host Optionen</h3>
     <v-form>
       <v-slider
-        label="Falloff"
+        label="Hör-Radius"
         min="0.5"
         max="10"
         step="0.1"
@@ -22,14 +22,14 @@
         </template>
       </v-slider>
       <v-checkbox
-        label="Vision falloff"
+        label="Nur in Sichtweite"
         v-model="$store.state.options.falloffVision"
         :readonly="!$store.state.ishost"
         :disabled="!$store.state.joinedRoom"
         @change="updateOptions"
       ></v-checkbox>
       <v-checkbox
-        label="Wall collision"
+        label="Wand blockiert Audio"
         v-model="$store.state.options.colliders"
         :readonly="!$store.state.ishost"
         :disabled="!$store.state.joinedRoom"

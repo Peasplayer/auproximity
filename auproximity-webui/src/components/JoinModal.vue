@@ -5,7 +5,7 @@
   >
     <v-card>
       <v-card-title>
-        <span>Join room {{gameCode}}</span>
+        <span>Spiel {{gameCode}} beitretten</span>
       </v-card-title>
       <v-card-text>
         <v-form @submit.prevent="joinRoom">

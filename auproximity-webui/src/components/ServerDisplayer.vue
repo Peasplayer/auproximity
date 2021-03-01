@@ -2,7 +2,7 @@
   <v-card class="pa-5">
     <div class="text-center">
       <h2>{{ title }}</h2>
-      <h4 v-if="$store.state.joinedRoom">Current Map: {{ this.colliderMap }}</h4>
+      <h4 v-if="$store.state.joinedRoom">Aktuelle Map: {{ this.colliderMap }}</h4>
     </div>
     <v-list v-if="$store.state.joinedRoom">
       <MyClientListItem :client="me" :mic="mymic" />
@@ -54,8 +54,8 @@ const AudioContext = window.AudioContext || // Default
   }
 })
 export default class ServerDisplayer extends Vue {
-  showSnackbar = false;
-  snackbarMessage = '';
+  showSnackbar = true;
+  snackbarMessage = 'Aloha!';
 
   colliderMap: 'Skeld' | 'Mira HQ' | 'Polus' = 'Skeld';
 

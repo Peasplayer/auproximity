@@ -10,10 +10,10 @@
             {{ client.name }}
           </span>
           <span class="float-right" v-if="stream !== undefined">
-            <span class="px-3">Connected</span><i class="fas fa-volume-up"></i>
+            <span class="px-3">Verbunden</span><i class="fas fa-volume-up"></i>
           </span>
           <span class="float-right" v-else>
-            <span class="px-3">Disconnected</span><i class="fas fa-volume-mute"></i>
+            <span class="px-3">Nicht Verbunden</span><i class="fas fa-volume-mute"></i>
           </span>
         </v-list-item-title>
       </v-list-item-content>
